@@ -1,5 +1,57 @@
 // out: css/main.css, sourcemap: true
 
+// COLOR VARIABLES
+@logo-red: darken(red, 30%);
+@logo-red-mute: desaturate(@logo-red, 70%);
+@logo-red-light: lighten(@logo-red, 70%);
+
+// TYPE VARIABLES
+@regular: 18px;
+@large: @regular * 1.75;
+@x-large: @large * 2;
+
 body {
-  background-color: darken(red, 30%);
+  background-color: @logo-red-mute;
+  font-size: @regular;
+  color: @logo-red-light;
 }
+
+h1 {
+  margin-bottom: 20px;
+  border-top: solid @logo-red 15px;
+  font-size: @x-large;
+  color: white;
+
+  + h2 {
+    margin-top: -20px;
+  }
+}
+
+h2 {
+  font-size: @large;
+
+  + p {
+    margin-top: 36px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+img {}
