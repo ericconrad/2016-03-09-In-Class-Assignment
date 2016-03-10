@@ -6,9 +6,9 @@
 @logo-red-light: lighten(@logo-red, 70%);
 
 // TYPE VARIABLES
-@regular: 18px;
+@regular: 1em;
 @large: @regular * 1.75;
-@x-large: @large * 2;
+@x-large: @large * 1.25;
 
 body {
   background-color: @logo-red-mute;
@@ -17,21 +17,27 @@ body {
   color: @logo-red-light;
 }
 
+.page-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
 h1 {
   margin-bottom: 20px;
   border-top: solid @logo-red 15px;
   font-family: 'Asset', serif;
-  font-size: @x-large;
+  font-size: @large;
   color: white;
 
   + h2 {
-    margin-top: -20px;
+    margin-top: -10px;
   }
 }
 
 h2 {
   font-weight: bold;
   font-size: @large;
+  line-height: 90%;
 
   + p {
     margin-top: 36px;
@@ -39,7 +45,7 @@ h2 {
 }
 
 img {
-  width: 300px;
+  width: 30%;
   margin: 20px 20px 20px 0;
   float: left;
 }
@@ -51,6 +57,37 @@ p {
     width: 100px;
     margin-right: 0;
     margin-left: 20px;
+  }
+}
+
+
+
+
+
+// BREAKPOINTS
+@media screen and (min-width: 550px) {
+
+  body {
+    font-size: 1.1em;
+  }
+
+  .page-container {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: @x-large;
+  }
+
+  img {
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+
+  body {
+    font-size: 1.2em;
   }
 }
 
